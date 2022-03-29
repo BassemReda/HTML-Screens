@@ -1,0 +1,48 @@
+body {
+  background-color: #644cd3;
+  font-family: cursive;
+  color: white;
+}
+
+.text-box,
+#submit-btn {
+  margin: 10px;
+  background-color: #d7c9c9;
+  background: rgba(215, 201, 201, 0.4);
+  border-radius: 3px;
+  color: white;
+  font-family: cursive;
+  font-size: 20px;
+}
+
+::placeholder {
+  color: white;
+  font-family: cursive;
+  opacity: 1;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
