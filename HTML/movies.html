@@ -17,26 +17,26 @@
   <body>
     <div class="outer">
       <div class="middle">
-        <div class="inner">
-          <h1 class="text">Movies</h1>
-          <table>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <h1 class="text mb-4">Movies</h1>
+          <table class="table align-middle text-center w-50 p-3">
             <thead>
               <tr>
-                <th id="name-col">Name</th>
-                <th>Poster</th>
-                <th>Votes</th>
+                <th scope="col" class="col-3">Name</th>
+                <th scope="col" class="col-3">Poster</th>
+                <th scope="col" class="col-3">Votes</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>The Matrix</td>
-                <td>
+                <td class="col-3">The Matrix</td>
+                <td class="col-3">
                   <img
                     src="https://imgc.allpostersimages.com/img/posters/the-matrix_u-L-F4S5W20.jpg"
                     alt="The Matrix"
                   />
                 </td>
-                <td>83%</td>
+                <td class="col-3">83%</td>
               </tr>
               <tr>
                 <td>The Lion King</td>
@@ -49,14 +49,14 @@
                 <td>75%</td>
               </tr>
               <tr>
-                <td>Joker</td>
-                <td>
+                <td style="border-bottom: 0;">Joker</td>
+                <td style="border-bottom: 0;">
                   <img
                     src="https://imgc.allpostersimages.com/img/posters/joker_u-L-F9JL6C0.jpg"
                     alt="Joker"
                   />
                 </td>
-                <td>67%</td>
+                <td style="border-bottom: 0;">67%</td>
               </tr>
             </tbody>
           </table>

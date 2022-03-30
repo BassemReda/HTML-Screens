@@ -7,16 +7,12 @@ body {
 table {
   background-color: #d7c9c9;
   background: rgba(215, 201, 201, 0.4);
-  color: white;
+  color: white !important;
   font-family: cursive;
   font-size: 20px;
+  border-radius: 8px;
 }
 
-table, th, td {
-    border: 1px solid;
-    border-collapse: collapse;
-    padding: 20px;
-}
 
 
 img {
