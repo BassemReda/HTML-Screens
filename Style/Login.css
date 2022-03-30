@@ -6,17 +6,15 @@ body {
 
 .text-box,
 #submit-btn {
-  margin: 10px;
-  background-color: #d7c9c9;
-  background: rgba(215, 201, 201, 0.4);
+  background: rgba(215, 201, 201, 0.4) !important;
   border-radius: 3px;
-  color: white;
+  color: white !important;
   font-family: cursive;
   font-size: 20px;
 }
 
 ::placeholder {
-  color: white;
+  color: white !important;
   font-family: cursive;
   opacity: 1;
   font-size: 20px;
