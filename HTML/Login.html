@@ -11,30 +11,63 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="../Style/Login.css" />
-    
+
+    <script>
+      function validateForm() {
+        var username = document.forms["loginForm"]["username"].value;
+        var password = document.forms["loginForm"]["user-pw"].value;
+
+        if (username.length < 4 || username.length > 20) {
+          alert("Username must contain 8-20 characters");
+          return false;
+        }
+        if (password.length < 4 || password.length > 20) {
+          alert("Password must contain 8-20 characters");
+          return false;
+        }
+      }
+    </script>
+
     <title>Login</title>
   </head>
   <body>
     <div class="outer">
       <div class="middle">
-        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
           <h1 class="text mb-4">Login</h1>
-          <form class="d-flex flex-column justify-content-center align-items-center">
+          <form
+            name="loginForm"
+            action="./movies.html"
+            onsubmit="return validateForm()"
+            method="post"
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
             <input
               type="text"
               id="username"
+              name="username"
               class="form-control text-box"
               placeholder="Username"
+              required
             />
             <br />
             <input
               type="password"
               id="user-pw"
+              name="user-pw"
               class="form-control text-box"
               placeholder="Password"
+              required
             />
             <br />
-            <input type="submit" value="Login" id="submit-btn" class="btn btn-outline-light" />
+            <input
+              type="submit"
+              value="Login"
+              id="submit-btn"
+              class="btn btn-outline-light"
+            />
           </form>
         </div>
       </div>

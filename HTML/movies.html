@@ -17,14 +17,30 @@
   <body>
     <div class="outer">
       <div class="middle">
-        <div class="d-flex flex-column justify-content-center align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
           <h1 class="text mb-4">Movies</h1>
           <table class="table align-middle text-center w-50 p-3">
-            <thead>
+            <thead class="align-middle">
               <tr>
-                <th scope="col" class="col-3">Name</th>
-                <th scope="col" class="col-3">Poster</th>
-                <th scope="col" class="col-3">Votes</th>
+                <th scope="col" class="unselectable">Name</th>
+                <th scope="col" class="unselectable">Poster</th>
+                <th scope="col" class="unselectable">
+                  Votes
+                  <button
+                    onclick="sortTableByVotes('asc')"
+                    class="btn voteSortBtn"
+                  >
+                    ▽
+                  </button>
+                  <button
+                    onclick="sortTableByVotes('desc')"
+                    class="btn voteSortBtn"
+                  >
+                    △
+                  </button>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -36,7 +52,17 @@
                     alt="The Matrix"
                   />
                 </td>
-                <td class="col-3">83%</td>
+                <td class="col-3">83</td>
+              </tr>
+              <tr>
+                <td>Joker</td>
+                <td>
+                  <img
+                    src="https://imgc.allpostersimages.com/img/posters/joker_u-L-F9JL6C0.jpg"
+                    alt="Joker"
+                  />
+                </td>
+                <td>64</td>
               </tr>
               <tr>
                 <td>The Lion King</td>
@@ -46,22 +72,31 @@
                     alt="The Lion King"
                   />
                 </td>
-                <td>75%</td>
-              </tr>
-              <tr>
-                <td style="border-bottom: 0;">Joker</td>
-                <td style="border-bottom: 0;">
-                  <img
-                    src="https://imgc.allpostersimages.com/img/posters/joker_u-L-F9JL6C0.jpg"
-                    alt="Joker"
-                  />
-                </td>
-                <td style="border-bottom: 0;">67%</td>
+                <td>75</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
     </div>
+
+    <script>
+      function sortTableByVotes(sortBy) {
+        var tbody = document.querySelector("table tbody");
+        
+        var rows = [].slice.call(tbody.querySelectorAll("tr"));
+
+        rows.sort(function (a, b) {
+          if (sortBy == "asc")
+            return a.cells[2].innerHTML - b.cells[2].innerHTML;
+
+          return b.cells[2].innerHTML - a.cells[2].innerHTML;
+        });
+
+        rows.forEach(function (v) {
+          tbody.appendChild(v);
+        });
+      }
+    </script>
   </body>
 </html>

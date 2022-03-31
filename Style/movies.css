@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+*.unselectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
 body {
   background-color: #644cd3;
   font-family: cursive;
@@ -5,7 +16,6 @@ body {
 }
 
 table {
-  background-color: #d7c9c9;
   background: rgba(215, 201, 201, 0.4);
   color: white !important;
   font-family: cursive;
@@ -13,7 +23,23 @@ table {
   border-radius: 8px;
 }
 
+tbody {
+  border: 0;
+}
 
+.voteSortBtn {
+  color: white;
+  height: 100%;
+  width: fit-content;
+  padding: 0;
+  font-size: 20px;
+  box-shadow: none !important
+}
+
+.voteSortBtn:hover {
+  background: rgba(215, 201, 201, 0.226);
+  color: white !important;
+}
 
 img {
   max-width: 50%;
